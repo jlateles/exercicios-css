@@ -1,0 +1,57 @@
+<!--exercitando conceito de grid -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+  
+            grid-template-areas: 
+                "header header"
+                "main aside"
+                "footer footer";
+            grid-template-rows: 30px 1fr 35px;
+            grid-template-columns: 1fr 80px;
+    }
+
+        header {
+            grid-area:header;
+            background-color: red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    }
+        main {
+            grid-area: main;
+            background-color: orange;
+    }
+        aside {
+            grid-area: aside;
+            background-color: green;
+    }
+        footer {
+            grid-area: footer;
+            background-color: blue;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>logo</div>
+        <div>menu</div>
+    </header>
+
+    <main> conteúdo </main>
+    
+    <aside> infos adicionais </aside>
+    
+    <footer> rodapé </footer>
+</body>
+</html>
